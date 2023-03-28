@@ -44,5 +44,6 @@ class SettingVC: UIViewController {
         }))
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
+//        test
     }
 }
