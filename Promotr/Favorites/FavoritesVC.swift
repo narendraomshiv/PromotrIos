@@ -27,13 +27,14 @@ class FavoritesVC: UIViewController {
         {
             FavoriteApis()
         }
+        if (UserDefaults.standard.string(forKey: "Promoter_id") != nil)
+        {
+            FavoriteApis()
+        }
         else
         {
             CommonMethods.showAlertMessage(title:Constant.TITLE, message:Constant.PLS_LOGIN, view: self)
         }
-        
-        
-        
     }
 }
 extension FavoritesVC:UITableViewDataSource,UITableViewDelegate

@@ -44,8 +44,10 @@ class PromoterSignUp: UIViewController, UIImagePickerControllerDelegate & UINavi
      
         PromoterSignUpViewModel.validateFields(viewController: self) { (responseObject) in
             self.promoterModel = responseObject
-          let user_id = self.promoterModel?.data?.promoterInformation?.user_id
-            UserDefaults.standard.setValue(user_id, forKey: "user_id")
+          let user_id = self.promoterModel?.data?.promoterInformation?.id
+            UserDefaults.standard.setValue(user_id, forKey: "Promoter_id")
+            UserDefaults.standard.removeObject(forKey: "userid")
+
             let vc = self.storyboard?.instantiateViewController(identifier: "TabBarViewController") as! TabBarViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }

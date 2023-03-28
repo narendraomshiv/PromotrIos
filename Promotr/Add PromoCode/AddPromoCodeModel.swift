@@ -1,38 +1,38 @@
 //
-//  OngoingView.swift
+//  AddPromoCodeModel.swift
 //  Promotr
 //
-//  Created by Mac on 2/15/23.
+//  Created by Mac on 3/28/23.
 //
 
 import Foundation
-struct OngoingView : Codable {
+struct AddPromoCodeModel : Codable {
     let errors:Bool?
-    let data:PrmotrData?
+    let data:PrData?
     enum CodingKeys: String, CodingKey {
         case errors = "errors"
         case data = "data"
     }
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        errors = try values.decode(Bool.self, forKey: .errors)
-        data = try values.decodeIfPresent(PrmotrData.self, forKey: .data)
+        errors = try values.decodeIfPresent(Bool.self, forKey: .errors)
+        data = try values.decodeIfPresent(PrData.self, forKey: .data)
     }
     
     
 }
-struct PrmotrData : Codable {
+struct PrData : Codable {
    
-    let promocode:[promocodeGetData]?
+    let promocodes:promocodeDetails?
     enum CodingKeys: String, CodingKey {
-        case promocode = "promocodes"
+        case promocodes = "promocode"
     }
     init(from decoder: Decoder) throws {
         let values = try  decoder.container(keyedBy: CodingKeys.self)
-        promocode = try values.decodeIfPresent([promocodeGetData].self, forKey: .promocode)
+        promocodes = try values.decodeIfPresent(promocodeDetails.self, forKey: .promocodes)
     }
 }
-struct promocodeGetData : Codable {
+struct promocodeDetails : Codable {
 
     let title:String?
     let description:String?
@@ -41,10 +41,10 @@ struct promocodeGetData : Codable {
     let store_website_url:String?
     let discount_amount:String?
     let expiry_date:String?
-    let category_id:Int?
+    let category_id:String?
     let promoter_id:Int?
     let id:Int?
-//    let full_image_url:String?
+    let full_image_url:String?
     
     enum CodingKeys: String, CodingKey {
         case title = "title"
@@ -57,7 +57,7 @@ struct promocodeGetData : Codable {
         case category_id = "category_id"
         case promoter_id = "promoter_id"
         case id = "id"
-//        case full_image_url = "full_image_url"
+        case full_image_url = "full_image_url"
     }
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
@@ -68,33 +68,33 @@ struct promocodeGetData : Codable {
         store_website_url = try values.decode(String.self, forKey: .store_website_url)
         discount_amount = try values.decode(String.self, forKey: .discount_amount)
         expiry_date = try values.decode(String.self, forKey: .expiry_date)
-        category_id = try values.decode(Int.self, forKey: .category_id)
+        category_id = try values.decode(String.self, forKey: .category_id)
         promoter_id = try values.decode(Int.self, forKey: .promoter_id)
         id = try values.decode(Int.self, forKey: .id)
-//        full_image_url = try values.decode(String.self, forKey: .full_image_url)
+        full_image_url = try values.decode(String.self, forKey: .full_image_url)
     }
 }
+
 /*
- "errors": false,
+ {
+     "errors": false,
      "data": {
-         "promocodes": [
-             {
-                 "id": 14,
-                 "title": "Test Promo Code",
-                 "description": "PromoCode for nike store",
-                 "code_id": "NIKE22AED",
-                 "store_name": "Nike",
-                 "store_website_url": "https://nike.ae/store",
-                 "image_url": null,
-                 "discount_amount": "100.00",
-                 "discount_amount_ceiling": null,
-                 "expiry_date": "2023-08-29T00:00:00.000000Z",
-                 "type": "open",
-                 "category_id": 1,
-                 "brand_store_id": null,
-                 "promoter_id": 44,
-                 "created_at": "2023-03-28T06:36:21.000000Z",
-                 "updated_at": "2023-03-28T06:36:21.000000Z",
-                 "full_image_url": null
-             },
+         "promocode": {
+             "title": "Test Promo Code",
+             "description": "PromoCode for nike store",
+             "code_id": "NIKE22AED",
+             "store_name": "Nike",
+             "store_website_url": "https://nike.ae/store",
+             "discount_amount": "100",
+             "expiry_date": "2023-08-29T00:00:00.000000Z",
+             "type": "open",
+             "category_id": "1",
+             "promoter_id": 44,
+             "updated_at": "2023-03-28T06:36:21.000000Z",
+             "created_at": "2023-03-28T06:36:21.000000Z",
+             "id": 14,
+             "full_image_url": null
+         }
+     }
+ }
  */

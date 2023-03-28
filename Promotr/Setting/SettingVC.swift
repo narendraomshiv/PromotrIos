@@ -40,7 +40,6 @@ class SettingVC: UIViewController {
             let vc = self.storyboard?.instantiateViewController(identifier: "FristPage") as! FristPage
             UserDefaults.standard.removeObject(forKey: "skip")
             UserDefaults.standard.removeObject(forKey: "userid")
-            UserDefaults.standard.removeObject(forKey: "user_id")
             self.navigationController?.pushViewController(vc, animated: true)
         }))
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))

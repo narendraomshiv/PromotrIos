@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
               {
               window.rootViewController = userTab
               }
-              else if UserDefaults.standard.string(forKey: "user_id") != nil
+              else if UserDefaults.standard.string(forKey: "Promoter_id") != nil
               {
                   window.rootViewController = promotrTab
               }

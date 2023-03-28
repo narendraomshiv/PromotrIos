@@ -27,6 +27,7 @@ var userProfile = BaseUrl+"protected/user-profile"
 var favorite = BaseUrl+"protected/user-promo-codes"
 //======Become - Promoter
 var become_a_promoter = "https://api.promotr.club/api/v1/protected/user-profile/become-a-promoter"
+var Create_PromoCode = BaseUrl+"protected/promo-codes"
 
 
 //========================================================
@@ -64,8 +65,8 @@ struct Constant {
     static let ASK_LOGIN = "Please Frist Login To Access your Profile"
     static let PLS_LOGIN = "Please Login"
     
-    static let About = "Please fill About section!"
+    static let About = "The about must be at least 50 characters"
     static let INSTAGRAM_LINK = "Please fill instagramLink section!"
     static let Image_Url  = "Please Upload Image!"
-    
+    static let All_FIELD  = "Please Fill all the field"
 }

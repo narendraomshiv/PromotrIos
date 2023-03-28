@@ -26,6 +26,9 @@
 		0465D5C4299229BC00FA37DB /* VerifyEmailVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465D5C3299229BC00FA37DB /* VerifyEmailVc.swift */; };
 		0465D5D1299233D900FA37DB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465D5D0299233D900FA37DB /* TabBarViewController.swift */; };
 		047C716229D160FA0002AA67 /* PromotrSignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C716129D160FA0002AA67 /* PromotrSignUpModel.swift */; };
+		0480633B29D2C70D00F3BC5C /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480633A29D2C70D00F3BC5C /* TypeCell.swift */; };
+		0480633E29D2CB1100F3BC5C /* AddPromoCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480633D29D2CB1100F3BC5C /* AddPromoCodeModel.swift */; };
+		0480634129D2CB2200F3BC5C /* AddPromoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480634029D2CB2200F3BC5C /* AddPromoViewModel.swift */; };
 		0491216829C82A600065EB58 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491216729C82A600065EB58 /* ProfileModel.swift */; };
 		04A0D42829B5C99A005D6102 /* Poppins-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04A0D41229B5C99A005D6102 /* Poppins-ExtraBoldItalic.otf */; };
 		04A0D42929B5C99A005D6102 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A0D41329B5C99A005D6102 /* Poppins-ExtraLight.ttf */; };
@@ -143,6 +146,9 @@
 		0465D5C3299229BC00FA37DB /* VerifyEmailVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailVc.swift; sourceTree = "<group>"; };
 		0465D5D0299233D900FA37DB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		047C716129D160FA0002AA67 /* PromotrSignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotrSignUpModel.swift; sourceTree = "<group>"; };
+		0480633A29D2C70D00F3BC5C /* TypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
+		0480633D29D2CB1100F3BC5C /* AddPromoCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPromoCodeModel.swift; sourceTree = "<group>"; };
+		0480634029D2CB2200F3BC5C /* AddPromoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPromoViewModel.swift; sourceTree = "<group>"; };
 		0491216729C82A600065EB58 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		04A0D41229B5C99A005D6102 /* Poppins-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
 		04A0D41329B5C99A005D6102 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -396,6 +402,9 @@
 			isa = PBXGroup;
 			children = (
 				04A509D82994EAE700693C61 /* AddPromocodeVC.swift */,
+				0480633A29D2C70D00F3BC5C /* TypeCell.swift */,
+				0480633D29D2CB1100F3BC5C /* AddPromoCodeModel.swift */,
+				0480634029D2CB2200F3BC5C /* AddPromoViewModel.swift */,
 			);
 			path = "Add PromoCode";
 			sourceTree = "<group>";
@@ -826,12 +835,14 @@
 				0431809F29A37DD900B02929 /* SignupModel.swift in Sources */,
 				04D3A405299CAF74005D6ADA /* ResetPassword.swift in Sources */,
 				04D0A86A29A630F200321D8C /* SliderModel.swift in Sources */,
+				0480633E29D2CB1100F3BC5C /* AddPromoCodeModel.swift in Sources */,
 				04CE8962299B71AE0007D60A /* PromoCode.swift in Sources */,
 				04DECB7B29B2114400849E5E /* UIViewController.swift in Sources */,
 				040264D0299265FF00447B17 /* HomeVC.swift in Sources */,
 				040264D329926DFA00447B17 /* SuggestionListCell.swift in Sources */,
 				70CD68A4299F98790073EDE0 /* LoginModel.swift in Sources */,
 				0465D5C4299229BC00FA37DB /* VerifyEmailVc.swift in Sources */,
+				0480633B29D2C70D00F3BC5C /* TypeCell.swift in Sources */,
 				0491216829C82A600065EB58 /* ProfileModel.swift in Sources */,
 				04E761FF2990DCBB009B364A /* UserViewModel.swift in Sources */,
 				04D12F3629A4C164005DA142 /* verifyOtpViewModel.swift in Sources */,
@@ -861,6 +872,7 @@
 				04D12F3C29A4DA9C005DA142 /* ResetPasswordViewModel.swift in Sources */,
 				0465D5D1299233D900FA37DB /* TabBarViewController.swift in Sources */,
 				04EB862D29936A1700E04544 /* FavoriteModel.swift in Sources */,
+				0480634129D2CB2200F3BC5C /* AddPromoViewModel.swift in Sources */,
 				04E299E329AF7887003D531D /* CountryVC.swift in Sources */,
 				04CE895B299B4AFF0007D60A /* OnGoingCell.swift in Sources */,
 				041AAB6929BB12CE006D0A11 /* SearchFilterVC.swift in Sources */,

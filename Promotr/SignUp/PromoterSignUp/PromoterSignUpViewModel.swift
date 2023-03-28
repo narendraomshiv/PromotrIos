@@ -13,8 +13,8 @@ class PromoterSignUpViewModel: NSObject {
         if viewController.instagramLinkTF.text?.count ?? 0<=0 {
             CommonMethods.showAlertMessage(title: Constant.TITLE, message: Constant.FRIST_NAME, view: viewController)
         }
-        else if viewController.aboutTF.text?.count ?? 0<=0 {
-            CommonMethods.showAlertMessage(title: Constant.TITLE, message: Constant.LAST_NAME, view: viewController)
+        else if viewController.aboutTF.text?.count ?? 50<=0 {
+            CommonMethods.showAlertMessage(title: Constant.TITLE, message: Constant.About, view: viewController)
         }
         else if viewController.uiImage.text?.count ?? 0<=0 {
             CommonMethods.showAlertMessage(title: Constant.TITLE, message: Constant.PHONE_NUMBER_VALIDATION, view: viewController)

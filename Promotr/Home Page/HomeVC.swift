@@ -69,7 +69,15 @@ extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == collectionView {
+        if collectionView == suggestionsCollectionView {
+            let id = promoModel?.data?.promocode?[indexPath.row].id
+            let vc = self.storyboard?.instantiateViewController(identifier: "PromoCode") as! PromoCode
+            vc.id = id
+            self.navigationController?.pushViewController(vc, animated: true)
+           
+        }
+        else
+        {
             let id = categoriesModel?.data?.cats?[indexPath.row].id
             let name = categoriesModel?.data?.cats?[indexPath.row].name
             let vc = self.storyboard?.instantiateViewController(identifier: "SearchFilterVC") as! SearchFilterVC

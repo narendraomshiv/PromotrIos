@@ -291,9 +291,25 @@ class ServiceHandler: NSObject {
             AF.request(url, method: .get, parameters: [Constant.BLANK:Constant.BLANK], encoding: URLEncoding.default, headers: ServiceHandler.headerParam()).responseJSON { response in
                 switch(response.result) {
                 case .success(let value):
-                    if let data = value as? [String:Any]{
-                        completion(response.data, data as NSDictionary)
+                    let statusCode = response.response?.statusCode
+                    if statusCode == 200 {
+                        if let data = value as? [String:Any] {
+                            completion(response.data, data as NSDictionary)
+                        }
                     }
+                    else if statusCode == 401 {
+                        let result = response.value! as! [String : Any]
+                        CommonMethods.showAlertMessage(title: Constant.TITLE, message: result["message"] as! String, view: viewcontroller)
+                    }
+                    else if statusCode == 422 {
+                        let result = response.value! as! [String : Any]
+                        CommonMethods.showAlertMessage(title: Constant.TITLE, message: result["message"] as! String, view: viewcontroller)
+                    }
+                    else {
+                        let result = response.value! as! [String : Any]
+                        CommonMethods.showAlertMessage(title: Constant.TITLE, message: result["message"] as! String, view: viewcontroller)
+                    }
+                
                 case .failure(let error):
                     print(error)
                     CommonMethods.showAlertMessage(title: Constant.BLANK, message: (error.localizedDescription), view: viewcontroller)
