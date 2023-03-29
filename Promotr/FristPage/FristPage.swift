@@ -34,7 +34,7 @@ class FristPage: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
              cell.SignUP.layer.borderWidth = 1
              cell.SignUP.layer.borderColor = #colorLiteral(red: 0.9743235707, green: 0.7031511068, blue: 0.6096453667, alpha: 1)
         cell.pageController.currentPage = indexPath.row
-        let str = slideModel?.data?.appSliders?[indexPath.row].image_url
+        let str = slideModel?.data?.appSliders?[indexPath.row].full_image_url
         if let url = URL(string:str!) {
             print(url)
             cell.sliderImage!.sd_setImage(with: url, placeholderImage: nil, options: SDWebImageOptions(rawValue: 0))

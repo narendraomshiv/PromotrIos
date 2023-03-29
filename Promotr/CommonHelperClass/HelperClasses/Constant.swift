@@ -28,7 +28,8 @@ var favorite = BaseUrl+"protected/user-promo-codes"
 //======Become - Promoter
 var become_a_promoter = "https://api.promotr.club/api/v1/protected/user-profile/become-a-promoter"
 var Create_PromoCode = BaseUrl+"protected/promo-codes"
-
+var Get_PromoterByID = BaseUrl+"promoters/"
+var user_Fev_Promotr = BaseUrl+"protected/user-favorites"
 
 //========================================================
 

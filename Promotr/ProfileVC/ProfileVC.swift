@@ -22,15 +22,19 @@ class ProfileVC: UIViewController {
     var updateProfileModel: UpdateProfileModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(UserDefaults.standard.string(forKey: "userid"))
         UIDesign()
         if (UserDefaults.standard.string(forKey: "userid") != nil)
         {
             getUserprofileData()
         }
+        if (UserDefaults.standard.string(forKey: "Promoter_id") != nil)
+        {
+            getUserprofileData()
+        }
         else
         {
-            CommonMethods.showAlertMessage(title:Constant.TITLE, message:Constant.ASK_LOGIN, view: self)
+//            CommonMethods.showAlertMessage(title:Constant.TITLE, message:Constant.ASK_LOGIN, view: self)
         }
         nameTF.isUserInteractionEnabled = false
         emailTF.isUserInteractionEnabled = false

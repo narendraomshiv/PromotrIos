@@ -20,6 +20,10 @@
 		041AAB6929BB12CE006D0A11 /* SearchFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AAB6829BB12CE006D0A11 /* SearchFilterVC.swift */; };
 		041AAB6D29BB1339006D0A11 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AAB6C29BB1339006D0A11 /* SearchResultCell.swift */; };
 		0431809F29A37DD900B02929 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431809E29A37DD900B02929 /* SignupModel.swift */; };
+		0447424029D3FD13006CD4D8 /* PermotrGetByID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447423F29D3FD13006CD4D8 /* PermotrGetByID.swift */; };
+		0447424329D40774006CD4D8 /* PromotrGetByIDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447424229D40774006CD4D8 /* PromotrGetByIDCell.swift */; };
+		0447424A29D41496006CD4D8 /* PromotrGetByModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447424929D41496006CD4D8 /* PromotrGetByModel.swift */; };
+		0447424D29D414B2006CD4D8 /* PromotrGetByViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447424C29D414B2006CD4D8 /* PromotrGetByViewModel.swift */; };
 		044EAA7729C2E99100596751 /* Promotr_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 044EAA7529C2E99100596751 /* Promotr_CoreData.xcdatamodeld */; };
 		045BEA2429A63253009CA11A /* SliderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045BEA2329A63253009CA11A /* SliderViewCell.swift */; };
 		0465D5BC2992173300FA37DB /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465D5BB2992173300FA37DB /* SignUpVC.swift */; };
@@ -140,6 +144,10 @@
 		041AAB6C29BB1339006D0A11 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		0431809E29A37DD900B02929 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		04421DA4993AFDB286057434 /* Pods-Promotr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promotr.debug.xcconfig"; path = "Target Support Files/Pods-Promotr/Pods-Promotr.debug.xcconfig"; sourceTree = "<group>"; };
+		0447423F29D3FD13006CD4D8 /* PermotrGetByID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermotrGetByID.swift; sourceTree = "<group>"; };
+		0447424229D40774006CD4D8 /* PromotrGetByIDCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotrGetByIDCell.swift; sourceTree = "<group>"; };
+		0447424929D41496006CD4D8 /* PromotrGetByModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotrGetByModel.swift; sourceTree = "<group>"; };
+		0447424C29D414B2006CD4D8 /* PromotrGetByViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotrGetByViewModel.swift; sourceTree = "<group>"; };
 		044EAA7629C2E99100596751 /* Promotr_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Promotr_CoreData.xcdatamodel; sourceTree = "<group>"; };
 		045BEA2329A63253009CA11A /* SliderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewCell.swift; sourceTree = "<group>"; };
 		0465D5BB2992173300FA37DB /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -313,6 +321,17 @@
 				040C82BC29BB30100039A6D6 /* SearchFilterViewModel.swift */,
 			);
 			path = "Search Result ";
+			sourceTree = "<group>";
+		};
+		0447423E29D3FCD1006CD4D8 /* Promotr Fev */ = {
+			isa = PBXGroup;
+			children = (
+				0447423F29D3FD13006CD4D8 /* PermotrGetByID.swift */,
+				0447424229D40774006CD4D8 /* PromotrGetByIDCell.swift */,
+				0447424929D41496006CD4D8 /* PromotrGetByModel.swift */,
+				0447424C29D414B2006CD4D8 /* PromotrGetByViewModel.swift */,
+			);
+			path = "Promotr Fev";
 			sourceTree = "<group>";
 		};
 		0465D5BA2992171800FA37DB /* SignUp */ = {
@@ -521,6 +540,7 @@
 				04D12F2D29A4C05E005DA142 /* VerifyOtp */,
 				04E299D729AF77CB003D531D /* CountryCode */,
 				04A0D45229B5E76E005D6102 /* Navigation */,
+				0447423E29D3FCD1006CD4D8 /* Promotr Fev */,
 				04E761EC2990DC32009B364A /* Assets.xcassets */,
 				2AF38E0529BA037E005CFF57 /* Colors.xcassets */,
 				04E761E92990DC2F009B364A /* Main.storyboard */,
@@ -836,6 +856,7 @@
 				04D3A405299CAF74005D6ADA /* ResetPassword.swift in Sources */,
 				04D0A86A29A630F200321D8C /* SliderModel.swift in Sources */,
 				0480633E29D2CB1100F3BC5C /* AddPromoCodeModel.swift in Sources */,
+				0447424D29D414B2006CD4D8 /* PromotrGetByViewModel.swift in Sources */,
 				04CE8962299B71AE0007D60A /* PromoCode.swift in Sources */,
 				04DECB7B29B2114400849E5E /* UIViewController.swift in Sources */,
 				040264D0299265FF00447B17 /* HomeVC.swift in Sources */,
@@ -856,6 +877,7 @@
 				04EB863829937A1100E04544 /* NotificationCell.swift in Sources */,
 				040C82B629BB2DDF0039A6D6 /* SearchFilterView.swift in Sources */,
 				04A509CB2994D1C100693C61 /* PromoterSignUp.swift in Sources */,
+				0447424A29D41496006CD4D8 /* PromotrGetByModel.swift in Sources */,
 				04EB8634299378AD00E04544 /* NotificationVC.swift in Sources */,
 				04F88F01299A409800821275 /* MyPromoCode.swift in Sources */,
 				04A509D92994EAE700693C61 /* AddPromocodeVC.swift in Sources */,
@@ -872,6 +894,7 @@
 				04D12F3C29A4DA9C005DA142 /* ResetPasswordViewModel.swift in Sources */,
 				0465D5D1299233D900FA37DB /* TabBarViewController.swift in Sources */,
 				04EB862D29936A1700E04544 /* FavoriteModel.swift in Sources */,
+				0447424029D3FD13006CD4D8 /* PermotrGetByID.swift in Sources */,
 				0480634129D2CB2200F3BC5C /* AddPromoViewModel.swift in Sources */,
 				04E299E329AF7887003D531D /* CountryVC.swift in Sources */,
 				04CE895B299B4AFF0007D60A /* OnGoingCell.swift in Sources */,
@@ -881,6 +904,7 @@
 				04EB863029936A2800E04544 /* FavoriteViewModel.swift in Sources */,
 				04E8C520299E501100E75BC5 /* SearchViewModel.swift in Sources */,
 				04E8C514299E4FB300E75BC5 /* DiscountCell.swift in Sources */,
+				0447424329D40774006CD4D8 /* PromotrGetByIDCell.swift in Sources */,
 				04D3A3FF299CA69B005D6ADA /* OngoingView.swift in Sources */,
 				041AAB6D29BB1339006D0A11 /* SearchResultCell.swift in Sources */,
 				04E762022990DCCB009B364A /* LoginVC.swift in Sources */,

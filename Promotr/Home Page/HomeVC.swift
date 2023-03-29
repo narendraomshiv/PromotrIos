@@ -17,6 +17,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         CategoriesApi()
         promocodeApi()
+       print(UserDefaults.standard.string(forKey: "Promoter_id"))
         searchTopView.layer.cornerRadius = 25
         self.searchTopView.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
         // Do any additional setup after loading the view.
@@ -71,7 +72,7 @@ extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == suggestionsCollectionView {
             let id = promoModel?.data?.promocode?[indexPath.row].id
-            let vc = self.storyboard?.instantiateViewController(identifier: "PromoCode") as! PromoCode
+            let vc = self.storyboard?.instantiateViewController(identifier: "PermotrGetByID") as! PermotrGetByID
             vc.id = id
             self.navigationController?.pushViewController(vc, animated: true)
            
